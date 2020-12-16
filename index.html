@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+ <body>
+	<div>
+			<fieldset>
+			<legend>Height and Weight</legend>
+				<label for="pounds">Weight (pounds):</label>
+				<input type="text">
+				<br>
+				<label for="inches">Height (inches):</label>
+				<input type="text">
+				<br>
+				<button type="button" name="calculate" value="Calculate your BMI" onclick="bmi()">Calculate your BMI</button>
+			</fieldset>
+			<fieldset>
+			<legend>BMI</legend>
+				<label for="bmi" id="bmi_label">Your calculated BMI is:</label>
+				<input type="text" id="bmi">
+			</fieldset>
+			<fieldset>
+				<legend>Current time</legend>
+					<p id="time"></p>
+				</fieldset>
+	</div>
+	
+	
+<script src="script.js"></script>
+</body>
+</html>
