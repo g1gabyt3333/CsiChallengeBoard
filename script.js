@@ -56,6 +56,7 @@ var age = window.prompt("What is your age") //Challenge 6
     }
     else{
         alert("You are unable to access the site")
+        window.close();
     }
 
 
