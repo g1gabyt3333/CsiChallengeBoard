@@ -10,12 +10,38 @@ var minutes = date.getMinutes();
 var seconds = date.getSeconds();
 
 
+var count = 0, isDark = false;
 
 var curTime = hours + ":" + minutes + ":" + seconds
 
-setInterval(setTime, 1000); //challenge 5 not done
-function setTime(){
+setInterval(setTime, 1000); //challenge 5 
+function setTime(){ 
+
+    date = new Date();
+    hours = date.getHours();
+    minutes = date.getMinutes();
+    seconds = date.getSeconds();
+
+
+    curTime = hours + ":" + minutes + ":" + seconds
     document.getElementById("time").innerText = curTime;
+    if(count >59){
+        if(isDark == false){
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            isDark = true;
+            count = 0;
+        }
+        else{
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+            isDark = false;
+            count = 0;
+        }
+
+
+    }
+    count++;
     
 }
 
